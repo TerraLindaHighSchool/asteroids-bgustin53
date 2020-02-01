@@ -8,7 +8,7 @@ import greenfoot.*;
  */
 public class Space extends World
 {
-    private GreenfootImage background = getBackground;
+    private GreenfootImage background = getBackground();
     private Counter scoreCounter;
     private int startAsteroids = 3;
 
