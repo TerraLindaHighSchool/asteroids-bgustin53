@@ -11,7 +11,7 @@ public class Space extends World
     private GreenfootImage background = getBackground();
     private Counter scoreCounter;
     private int startAsteroids = 3;
-    private final int NUM_OF_STARS = 400;
+    private final int NUM_OF_STARS = 300;
 
     /**
      * Create the space and all objects within it.
