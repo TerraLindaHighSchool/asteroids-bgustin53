@@ -11,7 +11,6 @@ public class Space extends World
     private GreenfootImage background = getBackground();
     private Counter scoreCounter;
     private int startAsteroids = 3;
-    private final int NUM_OF_STARS = 300;
 
     /**
      * Create the space and all objects within it.
@@ -26,7 +25,6 @@ public class Space extends World
         addObject(rocket, getWidth()/2 + 100, getHeight()/2);
         
         addAsteroids(startAsteroids);
-        paintStars(NUM_OF_STARS);
         
         scoreCounter = new Counter("Score: ");
         addObject(scoreCounter, 60, 480);
@@ -46,17 +44,6 @@ public class Space extends World
             int x = Greenfoot.getRandomNumber(getWidth()/2);
             int y = Greenfoot.getRandomNumber(getHeight()/2);
             addObject(new Asteroid(), x, y);
-        }
-    }
-    
-    private void paintStars(int count) 
-    {
-        for(int i = 0; i < count; i++) 
-        {
-            int x = Greenfoot.getRandomNumber(getWidth());
-            int y = Greenfoot.getRandomNumber(getHeight());
-            background.setColor(Color.WHITE);
-            background.fillOval(x, y, 2, 2);
         }
     }
     
