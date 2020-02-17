@@ -24,6 +24,7 @@ public class Space extends World
         
         Rocket rocket = new Rocket();
         addObject(rocket, getWidth()/2 + 100, getHeight()/2);
+       
         
         addAsteroids(startAsteroids);
         paintStars(NUM_OF_STARS);
@@ -71,7 +72,8 @@ public class Space extends World
      */
     public void gameOver() 
     {
-        // TODO: show the score board here. Currently missing.
+        ScoreBoard scoreboard = new ScoreBoard();
+        addObject(scoreboard, getWidth() / 2, getHeight() / 2);
     }
 
 }
