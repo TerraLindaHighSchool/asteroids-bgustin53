@@ -95,10 +95,10 @@ public class Rocket extends SmoothMover
     {
         if(getOneIntersectingObject(Asteroid.class) != null)
         {
-            World world = getWorld();
-            world.addObject(new Explosion(), getX(), getY());
-            world.removeObject(this);
-            
+            Space space = (Space) getWorld();
+            space.addObject(new Explosion(), getX(), getY());
+            space.removeObject(this);
+            space.gameOver();            
         }
     }
     
